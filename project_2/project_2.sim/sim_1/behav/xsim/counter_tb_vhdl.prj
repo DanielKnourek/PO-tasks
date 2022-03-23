@@ -1,0 +1,14 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../project_2.srcs/sources_1/new/dec7seg.vhd" \
+"../../../../project_2.srcs/sources_1/new/dec7segprocess.vhd" \
+"../../../../project_2.srcs/sources_1/new/mux.vhd" \
+"../../../../project_2.srcs/sources_1/new/muxprocess.vhd" \
+"../../../../project_2.srcs/sources_1/new/register1bit.vhd" \
+"../../../../project_2.srcs/sources_1/new/registerNbit.vhd" \
+"../../../../project_2.srcs/sources_1/new/counter.vhd" \
+"../../../../project_2.srcs/sim_1/new/register1bit_tb.vhd" \
+"../../../../project_2.srcs/sim_1/new/counter_tb.vhd" \
+
+# Do not sort compile order
+nosort

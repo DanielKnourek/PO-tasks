@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Sun Mar 20 05:21:40 2022
+# Process ID: 20020
+# Current directory: C:/Users/danie/Documents/Xilinx/stopwatch/stopwatch.runs/impl_1
+# Command line: vivado.exe -log stopwatch.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source stopwatch.tcl -notrace
+# Log file: C:/Users/danie/Documents/Xilinx/stopwatch/stopwatch.runs/impl_1/stopwatch.vdi
+# Journal file: C:/Users/danie/Documents/Xilinx/stopwatch/stopwatch.runs/impl_1\vivado.jou
+# Running On: Daniel-DellLaptop, OS: Windows, CPU Frequency: 2208 MHz, CPU Physical cores: 6, Host memory: 16964 MB
+#-----------------------------------------------------------
+source stopwatch.tcl -notrace

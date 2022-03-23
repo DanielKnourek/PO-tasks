@@ -1,0 +1,81 @@
+----------------------------------------------------------------------------------
+-- Company: 
+-- Engineer: 
+-- 
+-- Create Date: 19.03.2022 19:58:53
+-- Design Name: 
+-- Module Name: counter_tb - Behavioral
+-- Project Name: 
+-- Target Devices: 
+-- Tool Versions: 
+-- Description: 
+-- 
+-- Dependencies: 
+-- 
+-- Revision:
+-- Revision 0.01 - File Created
+-- Additional Comments:
+-- 
+----------------------------------------------------------------------------------
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+-- Uncomment the following library declaration if using
+-- arithmetic functions with Signed or Unsigned values
+use IEEE.NUMERIC_STD.ALL;
+
+-- Uncomment the following library declaration if instantiating
+-- any Xilinx leaf cells in this code.
+--library UNISIM;
+--use UNISIM.VComponents.all;
+
+entity counter_tb is
+    generic(
+        C_WIDTH : integer := 4
+    );
+    --  Port ( );
+end counter_tb;
+
+architecture Behavioral of counter_tb is
+    constant CLK_P : time := 10 ns;
+
+    signal clk : std_logic := '0';
+    signal en  : std_logic := '1';
+    signal rst : std_logic := '0';
+
+    signal cnt1    : std_logic_vector(C_WIDTH - 1 downto 0);
+    signal is_max1 : std_logic;
+    signal cnt2    : std_logic_vector(C_WIDTH - 1 downto 0);
+    signal is_max2 : std_logic;
+begin
+
+    clk <= not clk after CLK_P / 2;
+
+    counter_4bit : entity work.counter
+        generic map(
+            C_WIDTH => C_WIDTH,
+            C_MAX   => 9
+        )
+        port map(
+            clk    => clk,
+            rst    => rst,
+            en     => en,
+            q      => cnt1,
+            is_max => is_max1
+        );
+
+    counter_2bit : entity work.counter
+        generic map(
+            C_WIDTH => C_WIDTH,
+            C_MAX   => 9
+        )
+        port map(
+            clk    => clk,
+            rst    => rst,
+            en     => is_max1,
+            q      => cnt2,
+            is_max => is_max2
+        );
+
+end Behavioral;

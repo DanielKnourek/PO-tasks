@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Fri Mar  4 13:25:44 2022
+# Process ID: 17824
+# Current directory: C:/Users/danie/Documents/Xilinx/project_2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14460 C:\Users\danie\Documents\Xilinx\project_2\project_2.xpr
+# Log file: C:/Users/danie/Documents/Xilinx/project_2/vivado.log
+# Journal file: C:/Users/danie/Documents/Xilinx/project_2\vivado.jou
+# Running On: Daniel-DellLaptop, OS: Windows, CPU Frequency: 2208 MHz, CPU Physical cores: 6, Host memory: 16964 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/danie/Documents/Xilinx/project_2/project_2.xpr
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top register1bit [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+launch_simulation
+source register1bit_tb.tcl
+step
+step
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top counter [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+close_sim

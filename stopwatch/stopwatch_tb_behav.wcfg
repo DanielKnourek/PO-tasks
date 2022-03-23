@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="stopwatch_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="stopwatch_tb" />
+            <top_module name="types" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="817.090297 us"></ZoomEndTime>
+      <Cursor1Time time="1.000000 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="316"></NameColumnWidth>
+      <ValueColumnWidth column_width="128"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="7" />
+   <wvobject fp_name="/stopwatch_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+      <obj_property name="CustomSignalColor">#FFFFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/stopwatch_tb/C_WIDTH" type="other">
+      <obj_property name="ElementShortName">C_WIDTH</obj_property>
+      <obj_property name="ObjectShortName">C_WIDTH</obj_property>
+   </wvobject>
+   <wvobject fp_name="/stopwatch_tb/CLK_P" type="other">
+      <obj_property name="ElementShortName">CLK_P</obj_property>
+      <obj_property name="ObjectShortName">CLK_P</obj_property>
+   </wvobject>
+   <wvobject fp_name="group222" type="group">
+      <obj_property name="label">mux_block</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/stopwatch_tb/stopwatch_inst/mux_digits/v_i" type="array">
+         <obj_property name="ElementShortName">v_i[0:7][3:0]</obj_property>
+         <obj_property name="ObjectShortName">v_i[0:7][3:0]</obj_property>
+         <obj_property name="Reversed">false</obj_property>
+         <obj_property name="CustomSignalColor">#0000FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/stopwatch_tb/stopwatch_inst/mux_digits/sel" type="array">
+         <obj_property name="ElementShortName">sel[2:0]</obj_property>
+         <obj_property name="ObjectShortName">sel[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/stopwatch_tb/stopwatch_inst/mux_digits/q" type="array">
+         <obj_property name="ElementShortName">q[3:0]</obj_property>
+         <obj_property name="ObjectShortName">q[3:0]</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/stopwatch_tb/stopwatch_inst/mux_digits/SEL_SIZE" type="other">
+         <obj_property name="ElementShortName">SEL_SIZE</obj_property>
+         <obj_property name="ObjectShortName">SEL_SIZE</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group285" type="group">
+      <obj_property name="label">digit Looper</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/stopwatch_tb/stopwatch_inst/digit_looper/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/stopwatch_tb/stopwatch_inst/digit_looper/rst" type="logic">
+         <obj_property name="ElementShortName">rst</obj_property>
+         <obj_property name="ObjectShortName">rst</obj_property>
+      </wvobject>
+      <wvobject fp_name="/stopwatch_tb/stopwatch_inst/digit_looper/en" type="logic">
+         <obj_property name="ElementShortName">en</obj_property>
+         <obj_property name="ObjectShortName">en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/stopwatch_tb/stopwatch_inst/digit_looper/q" type="array">
+         <obj_property name="ElementShortName">q[12:0]</obj_property>
+         <obj_property name="ObjectShortName">q[12:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/stopwatch_tb/stopwatch_inst/digit_looper/is_max" type="logic">
+         <obj_property name="ElementShortName">is_max</obj_property>
+         <obj_property name="ObjectShortName">is_max</obj_property>
+      </wvobject>
+      <wvobject fp_name="/stopwatch_tb/stopwatch_inst/digit_looper/cnt" type="array">
+         <obj_property name="ElementShortName">cnt[12:0]</obj_property>
+         <obj_property name="ObjectShortName">cnt[12:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/stopwatch_tb/stopwatch_inst/digit_looper/C_WIDTH" type="other">
+         <obj_property name="ElementShortName">C_WIDTH</obj_property>
+         <obj_property name="ObjectShortName">C_WIDTH</obj_property>
+      </wvobject>
+      <wvobject fp_name="/stopwatch_tb/stopwatch_inst/digit_looper/C_MAX" type="other">
+         <obj_property name="ElementShortName">C_MAX</obj_property>
+         <obj_property name="ObjectShortName">C_MAX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group426" type="group">
+      <obj_property name="label">digit seg</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/stopwatch_tb/stopwatch_inst/digit_seg/bcd" type="array">
+         <obj_property name="ElementShortName">bcd[3:0]</obj_property>
+         <obj_property name="ObjectShortName">bcd[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/stopwatch_tb/stopwatch_inst/digit_seg/sseg" type="array">
+         <obj_property name="ElementShortName">sseg[6:0]</obj_property>
+         <obj_property name="ObjectShortName">sseg[6:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/stopwatch_tb/stopwatch_inst/digit_seg/segled" type="array">
+         <obj_property name="ElementShortName">segled[6:0]</obj_property>
+         <obj_property name="ObjectShortName">segled[6:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group516" type="group">
+      <obj_property name="label">stpwtch</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/stopwatch_tb/stopwatch_inst/out_7seg" type="array">
+         <obj_property name="ElementShortName">out_7seg[6:0]</obj_property>
+         <obj_property name="ObjectShortName">out_7seg[6:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/stopwatch_tb/stopwatch_inst/out_seg_sel" type="array">
+         <obj_property name="ElementShortName">out_seg_sel[7:0]</obj_property>
+         <obj_property name="ObjectShortName">out_seg_sel[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/stopwatch_tb/stopwatch_inst/is_max_cnt" type="array">
+         <obj_property name="ElementShortName">is_max_cnt[8:0]</obj_property>
+         <obj_property name="ObjectShortName">is_max_cnt[8:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/stopwatch_tb/stopwatch_inst/counters_q" type="array">
+         <obj_property name="ElementShortName">counters_q[0:7][3:0]</obj_property>
+         <obj_property name="ObjectShortName">counters_q[0:7][3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/stopwatch_tb/stopwatch_inst/dl_cnt" type="array">
+         <obj_property name="ElementShortName">dl_cnt[12:0]</obj_property>
+         <obj_property name="ObjectShortName">dl_cnt[12:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/stopwatch_tb/stopwatch_inst/current_sel" type="array">
+         <obj_property name="ElementShortName">current_sel[2:0]</obj_property>
+         <obj_property name="ObjectShortName">current_sel[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/stopwatch_tb/stopwatch_inst/current_digit" type="array">
+         <obj_property name="ElementShortName">current_digit[3:0]</obj_property>
+         <obj_property name="ObjectShortName">current_digit[3:0]</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

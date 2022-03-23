@@ -1,0 +1,15 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../stopwatch.srcs/sources_1/new/counter.vhd" \
+"../../../../stopwatch.srcs/sources_1/new/dec7seg.vhd" \
+"../../../../stopwatch.srcs/sources_1/new/types.vhd" \
+
+vhdl2008 xil_defaultlib  \
+"../../../../stopwatch.srcs/sources_1/new/mux.vhd" \
+"../../../../stopwatch.srcs/sources_1/new/stopwatch.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../../stopwatch.srcs/sim_1/new/stopwatch_tb.vhd" \
+
+# Do not sort compile order
+nosort
