@@ -46,7 +46,7 @@ begin
 
     stopwatch_inst : entity work.stopwatch
         port map(
-            clk => clk
+            CLK100MHZ => clk
         );
 
 end Behavioral;

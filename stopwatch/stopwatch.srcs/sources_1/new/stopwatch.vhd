@@ -34,7 +34,7 @@ use work.types.all;
 
 entity stopwatch is
     Port(
-        --        clk         : in  std_logic;
+        CLK100MHZ         : in  std_logic;
         out_7seg    : out std_logic_vector(6 downto 0);
         out_seg_sel : out std_logic_vector(7 downto 0)
     );
@@ -59,8 +59,8 @@ architecture Behavioral of stopwatch is
     constant CLK_P : time      := 10 ns;
     signal clk     : std_logic := '0';
 begin
-    clk <= not clk after CLK_P / 2;
-
+--    clk <= not clk after CLK_P / 2;
+    clk <= CLK100MHZ;
     cnt_ds : entity work.counter
         generic map(
             C_WIDTH => 32,
