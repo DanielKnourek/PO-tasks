@@ -65,7 +65,7 @@ begin
             if rst = '1' then
                 AN <= (others => '1');
             else
-                AN                                                            <= (others => '0');
+                AN                                                            <= (others => '1');
                 AN(to_integer(sel_cnt(sel_cnt'high downto sel_cnt'high - 2))) <= '0';
             end if;
         end if;

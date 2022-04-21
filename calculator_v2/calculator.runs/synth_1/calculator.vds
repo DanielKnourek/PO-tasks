@@ -1,13 +1,14 @@
 #-----------------------------------------------------------
-# Vivado v2020.1 (64-bit)
-# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
-# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Fri Apr  1 12:28:22 2022
-# Process ID: 1684
-# Current directory: D:/PO/calculator/calculator.runs/synth_1
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Thu Apr 21 20:24:00 2022
+# Process ID: 45516
+# Current directory: C:/Users/danie/Documents/Xilinx/calculator_v2/calculator.runs/synth_1
 # Command line: vivado.exe -log calculator.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source calculator.tcl
-# Log file: D:/PO/calculator/calculator.runs/synth_1/calculator.vds
-# Journal file: D:/PO/calculator/calculator.runs/synth_1\vivado.jou
+# Log file: C:/Users/danie/Documents/Xilinx/calculator_v2/calculator.runs/synth_1/calculator.vds
+# Journal file: C:/Users/danie/Documents/Xilinx/calculator_v2/calculator.runs/synth_1\vivado.jou
+# Running On: Daniel-DellLaptop, OS: Windows, CPU Frequency: 2208 MHz, CPU Physical cores: 6, Host memory: 16964 MB
 #-----------------------------------------------------------
 source calculator.tcl -notrace
 Command: synth_design -top calculator -part xc7a100tcsg324-1
@@ -17,76 +18,103 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 8188
+INFO: [Synth 8-7075] Helper process launched with PID 10884
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1018.590 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1254.105 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'calculator' [D:/PO/calculator/calculator.srcs/sources_1/new/calculator.vhd:47]
-INFO: [Synth 8-638] synthesizing module 'disp' [D:/PO/calculator/calculator.srcs/sources_1/new/disp.vhd:43]
-INFO: [Synth 8-638] synthesizing module 'counter' [D:/PO/calculator/calculator.srcs/sources_1/new/counter.vhd:47]
+INFO: [Synth 8-638] synthesizing module 'calculator' [C:/Users/danie/Documents/Xilinx/calculator_v2/calculator.srcs/sources_1/new/calculator.vhd:47]
+INFO: [Synth 8-638] synthesizing module 'disp' [C:/Users/danie/Documents/Xilinx/calculator_v2/calculator.srcs/sources_1/new/disp.vhd:43]
+INFO: [Synth 8-638] synthesizing module 'counter' [C:/Users/danie/Documents/Xilinx/calculator_v2/calculator.srcs/sources_1/new/counter.vhd:47]
 	Parameter C_WIDTH bound to: 14 - type: integer 
 	Parameter C_MAX bound to: -1 - type: integer 
-WARNING: [Synth 8-5825] expecting unsigned expression [D:/PO/calculator/calculator.srcs/sources_1/new/counter.vhd:57]
-WARNING: [Synth 8-5825] expecting unsigned expression [D:/PO/calculator/calculator.srcs/sources_1/new/counter.vhd:66]
-INFO: [Synth 8-256] done synthesizing module 'counter' (1#1) [D:/PO/calculator/calculator.srcs/sources_1/new/counter.vhd:47]
-WARNING: [Synth 8-614] signal 'data' is read in the process but is not in the sensitivity list [D:/PO/calculator/calculator.srcs/sources_1/new/disp.vhd:74]
-INFO: [Synth 8-256] done synthesizing module 'disp' (2#1) [D:/PO/calculator/calculator.srcs/sources_1/new/disp.vhd:43]
-INFO: [Synth 8-638] synthesizing module 'accalu' [D:/PO/calculator/calculator.srcs/sources_1/new/accalu.vhd:51]
+WARNING: [Synth 8-5825] expecting unsigned expression [C:/Users/danie/Documents/Xilinx/calculator_v2/calculator.srcs/sources_1/new/counter.vhd:57]
+WARNING: [Synth 8-5825] expecting unsigned expression [C:/Users/danie/Documents/Xilinx/calculator_v2/calculator.srcs/sources_1/new/counter.vhd:66]
+INFO: [Synth 8-256] done synthesizing module 'counter' (1#1) [C:/Users/danie/Documents/Xilinx/calculator_v2/calculator.srcs/sources_1/new/counter.vhd:47]
+WARNING: [Synth 8-614] signal 'data' is read in the process but is not in the sensitivity list [C:/Users/danie/Documents/Xilinx/calculator_v2/calculator.srcs/sources_1/new/disp.vhd:74]
+WARNING: [Synth 8-6014] Unused sequential element CA_reg was removed.  [C:/Users/danie/Documents/Xilinx/calculator_v2/calculator.srcs/sources_1/new/disp.vhd:79]
+INFO: [Synth 8-256] done synthesizing module 'disp' (2#1) [C:/Users/danie/Documents/Xilinx/calculator_v2/calculator.srcs/sources_1/new/disp.vhd:43]
+INFO: [Synth 8-638] synthesizing module 'accalu' [C:/Users/danie/Documents/Xilinx/calculator_v2/calculator.srcs/sources_1/new/accalu.vhd:51]
 	Parameter C_WIDTH bound to: 8 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'accalu' (3#1) [D:/PO/calculator/calculator.srcs/sources_1/new/accalu.vhd:51]
-INFO: [Synth 8-638] synthesizing module 'pulse' [D:/PO/calculator/calculator.srcs/sources_1/imports/new/pulse.vhd:39]
-INFO: [Synth 8-256] done synthesizing module 'pulse' (4#1) [D:/PO/calculator/calculator.srcs/sources_1/imports/new/pulse.vhd:39]
-WARNING: [Synth 8-614] signal 'rst' is read in the process but is not in the sensitivity list [D:/PO/calculator/calculator.srcs/sources_1/new/calculator.vhd:91]
-WARNING: [Synth 8-614] signal 'pulse' is read in the process but is not in the sensitivity list [D:/PO/calculator/calculator.srcs/sources_1/new/calculator.vhd:91]
-WARNING: [Synth 8-614] signal 'ac' is read in the process but is not in the sensitivity list [D:/PO/calculator/calculator.srcs/sources_1/new/calculator.vhd:91]
-INFO: [Synth 8-256] done synthesizing module 'calculator' (5#1) [D:/PO/calculator/calculator.srcs/sources_1/new/calculator.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'accalu' (3#1) [C:/Users/danie/Documents/Xilinx/calculator_v2/calculator.srcs/sources_1/new/accalu.vhd:51]
+INFO: [Synth 8-638] synthesizing module 'pulse' [C:/Users/danie/Documents/Xilinx/calculator_v2/calculator.srcs/sources_1/imports/new/pulse.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'pulse' (4#1) [C:/Users/danie/Documents/Xilinx/calculator_v2/calculator.srcs/sources_1/imports/new/pulse.vhd:39]
+WARNING: [Synth 8-614] signal 'rst' is read in the process but is not in the sensitivity list [C:/Users/danie/Documents/Xilinx/calculator_v2/calculator.srcs/sources_1/new/calculator.vhd:92]
+WARNING: [Synth 8-614] signal 'pulse' is read in the process but is not in the sensitivity list [C:/Users/danie/Documents/Xilinx/calculator_v2/calculator.srcs/sources_1/new/calculator.vhd:92]
+WARNING: [Synth 8-614] signal 'ac' is read in the process but is not in the sensitivity list [C:/Users/danie/Documents/Xilinx/calculator_v2/calculator.srcs/sources_1/new/calculator.vhd:92]
+WARNING: [Synth 8-3848] Net LED in module/entity calculator does not have driver. [C:/Users/danie/Documents/Xilinx/calculator_v2/calculator.srcs/sources_1/new/calculator.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'calculator' (5#1) [C:/Users/danie/Documents/Xilinx/calculator_v2/calculator.srcs/sources_1/new/calculator.vhd:47]
+WARNING: [Synth 8-7129] Port LED[15] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[14] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[13] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[12] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[11] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[10] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[9] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[8] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[7] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[6] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[5] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[4] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[3] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[2] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[1] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[0] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[11] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[10] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[9] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[8] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port btns[4] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port btns[3] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port btns[2] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port btns[1] in module calculator is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1018.590 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1254.105 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1018.590 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1254.105 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1018.590 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1254.105 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1018.590 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1254.105 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [D:/PO/calculator/calculator.srcs/constrs_1/imports/Downloads/master.xdc]
-Finished Parsing XDC File [D:/PO/calculator/calculator.srcs/constrs_1/imports/Downloads/master.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/PO/calculator/calculator.srcs/constrs_1/imports/Downloads/master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/calculator_propImpl.xdc].
+Parsing XDC File [C:/Users/danie/Documents/Xilinx/calculator_v2/calculator.srcs/constrs_1/imports/Downloads/master.xdc]
+Finished Parsing XDC File [C:/Users/danie/Documents/Xilinx/calculator_v2/calculator.srcs/constrs_1/imports/Downloads/master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/danie/Documents/Xilinx/calculator_v2/calculator.srcs/constrs_1/imports/Downloads/master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/calculator_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/calculator_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1037.605 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1272.059 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1037.605 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.072 . Memory (MB): peak = 1272.059 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1037.605 ; gain = 19.016
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1272.059 ; gain = 17.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1037.605 ; gain = 19.016
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 1272.059 ; gain = 17.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1037.605 ; gain = 19.016
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 1272.059 ; gain = 17.953
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg' [D:/PO/calculator/calculator.srcs/sources_1/new/calculator.vhd:60]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg' [C:/Users/danie/Documents/Xilinx/calculator_v2/calculator.srcs/sources_1/new/calculator.vhd:69]
+WARNING: [Synth 8-327] inferring latch for variable 'data_unsigned_reg' [C:/Users/danie/Documents/Xilinx/calculator_v2/calculator.srcs/sources_1/new/calculator.vhd:104]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1037.605 ; gain = 19.016
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 1272.059 ; gain = 17.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -102,10 +130,9 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 2     
 +---Muxes : 
-	   2 Input   32 Bit        Muxes := 2     
 	  13 Input   16 Bit        Muxes := 1     
 	  11 Input   16 Bit        Muxes := 2     
-	   2 Input    8 Bit        Muxes := 1     
+	   2 Input   12 Bit        Muxes := 1     
 	   2 Input    1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -122,26 +149,65 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design calculator has port CA[7] driven by constant 0
+WARNING: [Synth 8-7129] Port LED[15] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[14] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[13] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[12] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[11] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[10] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[9] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[8] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[7] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[6] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[5] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[4] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[3] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[2] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[1] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[0] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[11] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[10] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[9] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[8] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port btns[4] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port btns[3] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port btns[2] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port btns[1] in module calculator is either unconnected or has no load
+WARNING: [Synth 8-3332] Sequential element (data_reg[19]) is unused and will be removed from module calculator.
+WARNING: [Synth 8-3332] Sequential element (data_unsigned_reg[11]) is unused and will be removed from module calculator.
+WARNING: [Synth 8-3332] Sequential element (data_unsigned_reg[10]) is unused and will be removed from module calculator.
+WARNING: [Synth 8-3332] Sequential element (data_unsigned_reg[9]) is unused and will be removed from module calculator.
+WARNING: [Synth 8-3332] Sequential element (data_unsigned_reg[8]) is unused and will be removed from module calculator.
+WARNING: [Synth 8-3332] Sequential element (data_unsigned_reg[7]) is unused and will be removed from module calculator.
+WARNING: [Synth 8-3332] Sequential element (data_unsigned_reg[6]) is unused and will be removed from module calculator.
+WARNING: [Synth 8-3332] Sequential element (data_unsigned_reg[5]) is unused and will be removed from module calculator.
+WARNING: [Synth 8-3332] Sequential element (data_unsigned_reg[4]) is unused and will be removed from module calculator.
+WARNING: [Synth 8-3332] Sequential element (data_unsigned_reg[3]) is unused and will be removed from module calculator.
+WARNING: [Synth 8-3332] Sequential element (data_unsigned_reg[2]) is unused and will be removed from module calculator.
+WARNING: [Synth 8-3332] Sequential element (data_unsigned_reg[1]) is unused and will be removed from module calculator.
+WARNING: [Synth 8-3332] Sequential element (data_unsigned_reg[0]) is unused and will be removed from module calculator.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1037.605 ; gain = 19.016
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 1272.059 ; gain = 17.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1037.605 ; gain = 19.016
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:35 . Memory (MB): peak = 1272.059 ; gain = 17.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1037.605 ; gain = 19.016
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:36 . Memory (MB): peak = 1272.059 ; gain = 17.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1037.605 ; gain = 19.016
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:36 . Memory (MB): peak = 1272.059 ; gain = 17.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -159,52 +225,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1037.605 ; gain = 19.016
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 1272.059 ; gain = 17.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1037.605 ; gain = 19.016
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 1272.059 ; gain = 17.953
 ---------------------------------------------------------------------------------
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin SW_IBUF[15] with 1st driver pin 'SW_IBUF[15]_inst/O' [D:/PO/calculator/calculator.srcs/sources_1/new/calculator.vhd:33]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin SW_IBUF[15] with 2nd driver pin 'data_reg[15]/Q' [D:/PO/calculator/calculator.srcs/sources_1/new/calculator.vhd:60]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin SW_IBUF[14] with 1st driver pin 'SW_IBUF[14]_inst/O' [D:/PO/calculator/calculator.srcs/sources_1/new/calculator.vhd:33]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin SW_IBUF[14] with 2nd driver pin 'data_reg[14]/Q' [D:/PO/calculator/calculator.srcs/sources_1/new/calculator.vhd:60]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin SW_IBUF[13] with 1st driver pin 'SW_IBUF[13]_inst/O' [D:/PO/calculator/calculator.srcs/sources_1/new/calculator.vhd:33]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin SW_IBUF[13] with 2nd driver pin 'data_reg[13]/Q' [D:/PO/calculator/calculator.srcs/sources_1/new/calculator.vhd:60]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin SW_IBUF[12] with 1st driver pin 'SW_IBUF[12]_inst/O' [D:/PO/calculator/calculator.srcs/sources_1/new/calculator.vhd:33]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin SW_IBUF[12] with 2nd driver pin 'data_reg[12]/Q' [D:/PO/calculator/calculator.srcs/sources_1/new/calculator.vhd:60]
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        4|Failed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1037.605 ; gain = 19.016
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 1272.059 ; gain = 17.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1037.605 ; gain = 19.016
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 1272.059 ; gain = 17.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1037.605 ; gain = 19.016
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 1272.059 ; gain = 17.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1037.605 ; gain = 19.016
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 1272.059 ; gain = 17.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -220,42 +271,43 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |BUFG   |     2|
+|1     |BUFG   |     1|
 |2     |CARRY4 |    73|
 |3     |LUT1   |     5|
-|4     |LUT2   |    58|
-|5     |LUT3   |   132|
-|6     |LUT4   |    33|
+|4     |LUT2   |    46|
+|5     |LUT3   |   142|
+|6     |LUT4   |    43|
 |7     |LUT5   |    27|
-|8     |LUT6   |    78|
-|9     |FDRE   |    74|
-|10    |LD     |    12|
-|11    |IBUF   |    16|
-|12    |OBUF   |    16|
-|13    |OBUFT  |    24|
+|8     |LUT6   |    79|
+|9     |FDRE   |    73|
+|10    |FDSE   |     8|
+|11    |LDC    |    10|
+|12    |IBUF   |    15|
+|13    |OBUF   |    16|
+|14    |OBUFT  |    16|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1037.605 ; gain = 19.016
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 1272.059 ; gain = 17.953
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 8 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 1037.605 ; gain = 0.000
-Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1037.605 ; gain = 19.016
+Synthesis finished with 0 errors, 0 critical warnings and 41 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:38 . Memory (MB): peak = 1272.059 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 1272.059 ; gain = 17.953
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1037.605 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 85 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1272.059 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 83 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 1 inverter(s) to 4 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1038.977 ; gain = 0.000
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1272.059 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 12 instances were transformed.
-  LD => LDCE: 8 instances
-  LD => LDCE (inverted pins: G): 4 instances
+  A total of 10 instances were transformed.
+  LDC => LDCE: 10 instances
 
+Synth Design complete, checksum: 1e5cb75f
 INFO: [Common 17-83] Releasing license: Synthesis
-25 Infos, 7 Warnings, 8 Critical Warnings and 0 Errors encountered.
+25 Infos, 73 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1038.977 ; gain = 20.387
-INFO: [Common 17-1381] The checkpoint 'D:/PO/calculator/calculator.runs/synth_1/calculator.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:49 . Memory (MB): peak = 1272.059 ; gain = 17.953
+INFO: [Common 17-1381] The checkpoint 'C:/Users/danie/Documents/Xilinx/calculator_v2/calculator.runs/synth_1/calculator.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file calculator_utilization_synth.rpt -pb calculator_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Apr  1 12:29:00 2022...
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 21 20:24:57 2022...

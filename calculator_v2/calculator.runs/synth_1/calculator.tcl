@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "D:/PO/calculator/calculator.runs/synth_1/calculator.tcl"
+  variable script "C:/Users/danie/Documents/Xilinx/calculator_v2/calculator.runs/synth_1/calculator.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,27 +70,31 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 2
+set_param checkpoint.writeSynthRtdsInDcp 1
+set_param chipscope.maxJobs 3
+set_param synth.incrementalSynthesisCache C:/Users/danie/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-7844-Daniel-DellLaptop/incrSyn
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir D:/PO/calculator/calculator.cache/wt [current_project]
-set_property parent.project_path D:/PO/calculator/calculator.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/danie/Documents/Xilinx/calculator_v2/calculator.cache/wt [current_project]
+set_property parent.project_path C:/Users/danie/Documents/Xilinx/calculator_v2/calculator.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property ip_output_repo d:/PO/calculator/calculator.cache/ip [current_project]
+set_property ip_output_repo c:/Users/danie/Documents/Xilinx/calculator_v2/calculator.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
-  D:/PO/calculator/calculator.srcs/sources_1/new/accalu.vhd
-  D:/PO/calculator/calculator.srcs/sources_1/new/counter.vhd
-  D:/PO/calculator/calculator.srcs/sources_1/new/disp.vhd
-  D:/PO/calculator/calculator.srcs/sources_1/imports/new/pulse.vhd
-  D:/PO/calculator/calculator.srcs/sources_1/new/calculator.vhd
+  C:/Users/danie/Documents/Xilinx/calculator_v2/calculator.srcs/sources_1/new/accalu.vhd
+  C:/Users/danie/Documents/Xilinx/calculator_v2/calculator.srcs/sources_1/new/counter.vhd
+  C:/Users/danie/Documents/Xilinx/calculator_v2/calculator.srcs/sources_1/new/disp.vhd
+  C:/Users/danie/Documents/Xilinx/calculator_v2/calculator.srcs/sources_1/imports/new/pulse.vhd
+  C:/Users/danie/Documents/Xilinx/calculator_v2/calculator.srcs/sources_1/new/calculator.vhd
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -101,8 +105,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc D:/PO/calculator/calculator.srcs/constrs_1/imports/Downloads/master.xdc
-set_property used_in_implementation false [get_files D:/PO/calculator/calculator.srcs/constrs_1/imports/Downloads/master.xdc]
+read_xdc C:/Users/danie/Documents/Xilinx/calculator_v2/calculator.srcs/constrs_1/imports/Downloads/master.xdc
+set_property used_in_implementation false [get_files C:/Users/danie/Documents/Xilinx/calculator_v2/calculator.srcs/constrs_1/imports/Downloads/master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
@@ -110,6 +114,9 @@ close [open __synthesis_is_running__ w]
 OPTRACE "synth_design" START { }
 synth_design -top calculator -part xc7a100tcsg324-1
 OPTRACE "synth_design" END { }
+if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
+ send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"
+}
 
 
 OPTRACE "write_checkpoint" START { CHECKPOINT }
